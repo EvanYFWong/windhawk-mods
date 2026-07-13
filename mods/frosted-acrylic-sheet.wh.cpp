@@ -59,6 +59,26 @@ MIT License — feel free to use, modify, and share.
 // ==/WindhawkModReadme==
 
 // ==WindhawkModSettings==
+/*
+- enableAcrylic: true
+  $name: Enable acrylic blur
+  $description: Enable the frosted acrylic background effect.
+- blurOpacity: 0.15
+  $name: Blur opacity
+  $description: Opacity/tint strength used by the acrylic brush (0.0 - 1.0)
+  $min: 0.0
+  $max: 1.0
+  $step: 0.01
+- taskbarFrameWidth: 1410
+  $name: Taskbar frame width
+  $description: Width used for the centered taskbar frame. Set to 0 to use adaptive width.
+- taskbarHeight: 60
+  $name: Taskbar height
+  $description: Height of the taskbar in pixels.
+- iconSize: 40
+  $name: Icon size
+  $description: Default icon size in pixels.
+*/
 // ==/WindhawkModSettings==
 
 #include <windows.h>
@@ -83,7 +103,7 @@ static const wchar_t* g_controlStyles =
     L"controlStyles:\n"
     L"  - target: ScrollViewer > ScrollContentPresenter > Border > Grid\n"
     L"    styles:\n"
-    L"      - ColumnDefinitions:=<ColumnDefinitionCollection><ColumnDefinition Width=\"*\"/><ColumnDefinition Width=\"Auto\"/><ColumnDefinition Width=\"Auto\"/><ColumnDefinition Width=\"*\"/></ColumnDefinitionCollection>\n"
+    L"      - ColumnDefinitions:=<ColumnDefinitionCollection><ColumnDefinition Width=\"*\"/><ColumnDefinition Width=\"Auto\"/><ColumnDefinition Width=\"Auto\"/><ColumnDefinition Width=\"*\"/></Col[...]"
     L"      - HorizontalAlignment=Stretch\n"
     L"  - target: Taskbar.TaskbarFrame\n"
     L"    styles:\n"
@@ -134,7 +154,7 @@ static const wchar_t* g_controlStyles =
     L"    styles:\n"
     L"      - Shadow:=\n"
     L"      - BorderThickness:=\n"
-    L"  - target: Taskbar.OverflowToggleButton#OverflowButton > Taskbar.TaskListButtonPanel#OverflowToggleButtonRootPanel > Windows.UI.Xaml.Controls.FontIcon#FontIcon > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Controls.TextBlock\n"
+    L"  - target: Taskbar.OverflowToggleButton#OverflowButton > Taskbar.TaskListButtonPanel#OverflowToggleButtonRootPanel > Windows.UI.Xaml.Controls.FontIcon#FontIcon > Windows.UI.Xaml.Controls.G[...]\n"
     L"    styles:\n"
     L"      - Text=\n"
     L"  - target: Windows.UI.Xaml.Shapes.Rectangle#MostRecentlyUsedDivider\n"
